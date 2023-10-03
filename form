@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    
+    <!-- This script is required to load the Lightning library -->
+    {% comment %} theme-check-disable RemoteAsset,ParserBlockingJavaScript {% endcomment %}
+   <script src="https://greenworkstools123.secure.force.com/forms/lightning/lightning.out.js" async></script>
+    {% comment %} theme-check-enable RemoteAsset,ParserBlockingJavaScript {% endcomment %}
+  </head>
+    <body>
+      <div class="color-{{ section.settings.color_scheme }} gradient">
+        <div class="contact product-registration-form page-width section-{{ section.id }}-padding">
+          <!-- This div is where the component gets inserted to the DOM -->
+         <div id="embedder" style="display:none;"></div>
+
+          <c-embedded-product-registration-form data-aura-rendered-by="6:0" c-embeddedproductregistrationform_embeddedproductregistrationform-host>
+            <lightning-record-edit-form c-embeddedproductregistrationform_embeddedproductregistrationform>
+              <lightning-record-edit-form-create>
+        <form id="product-registration" c-embeddedproductregistrationform_embeddedproductregistrationform novalidate> 
+          <slot>
+            <slot>
+          <div class="form-section" c-embeddedproductregistrationform_embeddedproductregistrationform>
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="type" c-embeddedproductregistrationform_embeddedproductregistrationform>Type:</label>
+    <select name="type" id="type" c-embeddedproductregistrationform_embeddedproductregistrationform>
+      <option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Accessories">Accessories</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Batteries &amp; Chargers">Batteries &amp; Chargers</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Chainsaws/Pole Saws">Chainsaws/Pole Saws</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Cultivators &amp; Dethatchers">Cultivators &amp; Dethatchers</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Hedge Trimmers">Hedge Trimmers</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Home (Vacuum, etc.)">Home (Vacuum, etc.)</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Leaf Blowers">Leaf Blowers</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Power Tools">Power Tools</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Pressure Washers">Pressure Washers</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Ride On Mowers">Ride On Mowers</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Robotics">Robotics</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Snow">Snow</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="String Trimmers &amp; Edgers">String Trimmers &amp; Edgers</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Walk Behind Lawn Mowers">Walk Behind Lawn Mowers</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Other">Other</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Tool Combo Kit">Tool Combo Kit</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Trolling Motor">Trolling Motor</option>
+    </select>
+  </div>
+
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="model_number" c-embeddedproductregistrationform_embeddedproductregistrationform>Model Number:</label>
+    <input type="text" name="model_number" id="model_number" required c-embeddedproductregistrationform_embeddedproductregistrationform>
+  </div>
+
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="serial_number" c-embeddedproductregistrationform_embeddedproductregistrationform>Serial Number:</label>
+    <input type="text" name="serial_number" id="serial_number" required c-embeddedproductregistrationform_embeddedproductregistrationform>
+  </div>
+
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="place_purchased" c-embeddedproductregistrationform_embeddedproductregistrationform>Place Purchased:</label>
+    <select name="place_purchased" id="place_purchased" c-embeddedproductregistrationform_embeddedproductregistrationform>
+      <option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Greenworkstools.com">Greenworkstools.com</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Amazon">Amazon</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Best Buy">Best Buy</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Costco">Costco</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Home Depot">Home Depot</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Lowe's">Lowe's</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Menard's">Menard's</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Tractor Supply">Tractor Supply</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Walmart">Walmart</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Other">Other</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Canadian Tire">Canadian Tire</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="Greenworkstools.CA - CDN">Greenworkstools.CA - CDN</option>
+    </select>
+  </div>
+
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="receipt_upload" c-embeddedproductregistrationform_embeddedproductregistrationform>Receipt Upload ( jpg png gif ) (Max. File Size allowed is 6MB)</label>
+    <input type="file" name="receipt_upload" id="receipt_upload" accept="image/*" c-embeddedproductregistrationform_embeddedproductregistrationform>
+  </div><br/>
+<div> <h2>Owner Information</h2></div><br/>
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="first_name" c-embeddedproductregistrationform_embeddedproductregistrationform>First Name:</label>
+    <input type="text" name="first_name" id="first_name" required c-embeddedproductregistrationform_embeddedproductregistrationform>
+  </div>
+
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="last_name" c-embeddedproductregistrationform_embeddedproductregistrationform>Last Name:</label>
+    <input type="text" name="last_name" id="last_name" required c-embeddedproductregistrationform_embeddedproductregistrationform>
+  </div>
+
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="address" c-embeddedproductregistrationform_embeddedproductregistrationform>Address:</label>
+    <input type="text" name="address" id="address" required c-embeddedproductregistrationform_embeddedproductregistrationform>
+  </div>
+
+  <div class="form-group">
+    <label for="apt_suite" c-embeddedproductregistrationform_embeddedproductregistrationform>Apt/Suite:</label>
+    <input type="text" name="apt_suite" id="apt_suite" c-embeddedproductregistrationform_embeddedproductregistrationform>
+  </div>
+
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="state" c-embeddedproductregistrationform_embeddedproductregistrationform>State:</label>
+    <select type="text" name="state" id="state" required c-embeddedproductregistrationform_embeddedproductregistrationform>
+<option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="AL">Alabama</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="AK">Alaska</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="AZ">Arizona</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="AR">Arkansas</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="CA">California</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="CO">Colorado</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="CT">Connecticut</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="DE">Delaware</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="FL">Florida</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="GA">Georgia</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="HI">Hawaii</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="ID">Idaho</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="IL">Illinois</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="IN">Indiana</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="IA">Iowa</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="KS">Kansas</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="KY">Kentucky</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="LA">Louisiana</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="ME">Maine</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="MD">Maryland</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="MA">Massachusetts</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="MI">Michigan</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="MN">Minnesota</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="MS">Mississippi</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="MO">Missouri</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="MT">Montana</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="NE">Nebraska</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="NV">Nevada</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="NH">New Hampshire</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="NJ">New Jersey</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="NM">New Mexico</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="NY">New York</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="NC">North Carolina</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="ND">North Dakota</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="OH">Ohio</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="OK">Oklahoma</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="OR">Oregon</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="PA">Pennsylvania</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="RI">Rhode Island</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="SC">South Carolina</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="SD">South Dakota</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="TN">Tennessee</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="TX">Texas</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="UT">Utah</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="VT">Vermont</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="VA">Virginia</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="WA">Washington</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="WV">West Virginia</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="WI">Wisconsin</option><option c-embeddedproductregistrationform_embeddedproductregistrationform="" value="WY">Wyoming</option>
+    </select>
+  </div>
+
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="city" c-embeddedproductregistrationform_embeddedproductregistrationform>City:</label>
+    <input type="text" name="city" id="city" required c-embeddedproductregistrationform_embeddedproductregistrationform>
+  </div>
+
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="zip" c-embeddedproductregistrationform_embeddedproductregistrationform>Zip:</label>
+    <input type="text" name="zip" id="zip" required c-embeddedproductregistrationform_embeddedproductregistrationform>
+  </div>
+
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="phone_number" c-embeddedproductregistrationform_embeddedproductregistrationform>Phone Number:</label>
+    <input type="tel" name="phone_number" id="phone_number" required c-embeddedproductregistrationform_embeddedproductregistrationform>
+  </div>
+
+  <div class="form-group" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="email" c-embeddedproductregistrationform_embeddedproductregistrationform>Email Address:</label>
+    <input type="email" name="email" id="email" required c-embeddedproductregistrationform_embeddedproductregistrationform>
+  </div>
+
+  <div class="form-group-checkbox" c-embeddedproductregistrationform_embeddedproductregistrationform>
+    <label for="accept_terms" c-embeddedproductregistrationform_embeddedproductregistrationform> <a href="https://www.greenworkstools.com/terms-conditions" target="_blank" class="termsAnchor">&nbsp;I accept the Terms and Conditions&nbsp;</a></label>
+    <input type="checkbox" name="accept_terms" id="accept_terms" required c-embeddedproductregistrationform_embeddedproductregistrationform>
+  </div>
+</div>
+
+<button type="submit" c-embeddedproductregistrationform_embeddedproductregistrationform>Register Product</button>
+    </slot>
+          </slot>    
+  </form>  
+              </lightning-record-edit-form-create></lightning-record-edit-form>
+            </c-embedded-product-registration-form>
+          <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  var form = document.getElementById("product-registration");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+   
+    const type = document.getElementById('type').value;
+    const modelNumber = document.getElementById('model_number').value;
+    const serialNumber = document.getElementById('serial_number').value;
+    const placePurchased = document.getElementById('place_purchased').value;
+    const receipt_upload = document.getElementById('receipt_upload').value;
+    const firstName = document.getElementById('first_name').value;
+    const lastName = document.getElementById('last_name').value;
+    const address = document.getElementById('address').value;
+    const aptSuite = document.getElementById('apt_suite').value;
+    const state = document.getElementById('state').value;
+    const city = document.getElementById('city').value;
+    const zip = document.getElementById('zip').value;
+    const phoneNumber = document.getElementById('phone_number').value;
+    const email = document.getElementById('email').value;
+    const terms = document.getElementById('accept_terms').value;
+   
+    console.log('Type:', type);
+    console.log('Model Number:', modelNumber);
+    console.log('Serial Number:', serialNumber);
+    console.log('Place Purchased:', placePurchased);
+    console.log('Receipt:', receipt_upload);
+    console.log('First Name:', firstName);
+    console.log('Last Name:', lastName);
+    console.log('Address:', address);
+    console.log('Apt or Suite:', aptSuite);
+    console.log('State:', state);
+    console.log('City:', city);
+    console.log('Zip:', zip);
+    console.log('Phone Number:', phoneNumber);
+    console.log('Email:', email);
+
+  
+
+const formData = {
+  Type__c: type,
+  Model_Number__c: modelNumber,
+  Serial_Number__c: serialNumber,
+  Place_Purchased__c: placePurchased,
+  receiptUpload: receipt_upload,
+  First_Name__c: firstName,
+  Last_Name__c: lastName,
+  Mailing_Address__c: address,
+  Mailing_Apt_Suite__c: aptSuite,
+  Mailing_State__c: state,
+  Mailing_City__c: city,
+  Mailing_Zip_Code__c: zip,
+  Phone_Number__c: phoneNumber,
+  Email_Address__c: email,
+  termsCheck: terms,
+};
+
+
+      // After capturing formData
+fetch('https://greenworkstools123.secure.force.com/forms/lightning/lightning.out.js', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(formData),
+})
+.then(response => {
+  if (response.ok) {
+    // Handle successful submission
+    console.log('Form submitted successfully');
+  } else {
+    // Handle error in submission
+    console.error('Error submitting form');
+  }
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+    
+  });
+});
+
+
+
+          
+
+</script>
+
+    <style>
+    
+        /* Style the form container */
+    .form-section {
+      margin-bottom: 20px;
+    }
+    
+    /* Style form labels */
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size:1.6rem;
+    }
+    
+    /* Style text inputs and select boxes */
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 50%; /* Adjust this width as needed */
+      padding: 5px; /* Adjust padding as needed */
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    /* Style the submit button */
+    button[type="submit"] {
+      background-color: #82bc00;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    /* Style the checkbox label */
+    label[for="accept_terms"] {
+      font-weight: normal;
+    }
+    
+    /* Container for side-by-side fields */
+    .side-by-side-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    /* Individual field group within the container */
+    .form-group {
+      flex: 1;
+      margin-right: 10px; /* Add spacing between fields if needed */
+    }
+    
+    /* Adjust field widths as needed */
+    .form-group label,
+    .form-group input {
+      width: 100%; /* Fields occupy full width within the container */
+    }
+    
+    /* Styles for screens with a maximum width of 767px (typical mobile screens) */
+    @media screen and (max-width: 767px) {
+    .daForm{
+    width:100%;
+    }
+      /* Shorten text inputs and select boxes further for mobile */
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 100%; /* Adjust this width as needed */
+        padding: 10px; /* Adjust padding as needed */
+        margin-bottom: 15px;
+      }
+      input[type="text"],
+      input[type="email"],
+      select,
+      label {
+        font-size: x-large; /* Adjust font size as needed */
+      }
+    
+      .side-by-side-container {
+        display: block;
+      }
+    
+      /* Reset margins and widths for individual fields */
+      .form-group {
+        flex: auto; /* Revert to default behavior */
+        margin-right: 0; /* Remove spacing between fields */
+      }
+    
+      /* Adjust field widths as needed for mobile */
+      .form-group label,
+      .form-group input {
+        width: 100%; /* Fields occupy full width */
+        height:50px;
+        font-size: x-large; /* Adjust font size as needed */
+      }
+      button[type="submit"] {
+        font-size: x-large; /* Adjust font size as needed */
+        padding: 15px 30px; /* Adjust padding as needed */
+      }
+    }
+    /* Desktop layout - Fields displayed side by side */
+/* Adjust breakpoint as needed */
+/* Desktop layout - Fields displayed side by side */
+/* Adjust breakpoint as needed */
+@media screen and (min-width: 768px) {
+  /* Create a two-column grid layout */
+  .form-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    grid-gap: 10px; /* Adjust the gap between columns */
+  }
+
+  /* Style the labels for consistent alignment */
+  .form-group label {
+    display: block;
+    width: 100%;
+  }
+
+  /* Adjust individual field widths as needed */
+  .form-group select,
+  .form-group input[type="text"],
+  .form-group input[type="tel"],
+  .form-group input[type="email"] {
+    width: 100%; /* Each field occupies 100% of its grid cell */
+  }
+
+  /* Adjust specific field widths if necessary */
+  #type,
+  #model_number,
+  #serial_number,
+  #place_purchased,
+  #receipt_upload,
+  #first_name,
+  #last_name,
+  #state,
+  #city,
+  #zip,
+  #phone_number,
+  #email,
+  {
+    grid-column: span 1; /* Each field spans 1 column */
+  }
+
+  .form-group-checkbox {
+    display: flex;
+    align-items: center; /* Vertically center the checkbox and label */
+  }
+
+  /* Add some margin between the checkbox and label if needed */
+  .form-group-checkbox label {
+    margin-left: 10px; /* Adjust margin as needed */
+  }
+}
+
+    </style>
+        </div>
+      </div>
+                <div id="auraErrorMessage"></div>
+    </body>
+  </html>
+<script defer>
+  
+            $Lightning.use("c:embeddedProductRegistrationApp",    // name of the Lightning app
+                function() {                
+                    $Lightning.createComponent(
+                        "c:embeddedProductRegistrationForm", // name of the LWC form
+                        { },             
+                        "embedder",   // the id of the DOM location to insert the component
+                        function(cmp) {}
+                    );
+                },
+                'https://greenworkstools123.my.salesforce-sites.com/forms'  // Site endpoint
+            );
+        
+</script>
+
+<script>if (this.SfdcApp && this.SfdcApp.projectOneNavigator) { SfdcApp.projectOneNavigator.sendTitleToParent('TestProductRegistration'); } </script>
